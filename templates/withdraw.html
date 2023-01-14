@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Withdraw {% endblock title %}
+
+{% block body %}
+<form action="deposit" method="post">   {% csrf_token %}
+    <input class="form-control form-control-lg" type="text" placeholder="Enter the Account number" aria-label="acc" name = 'acc'><br>
+    <input class="form-control form-control-lg" type="text" placeholder="Enter the amount you want to Withdraw" aria-label="amount" name = 'amount'><br>
+    <button type="submit" class="btn btn-success"><b><i>Confirm</i></b></button>
+
+</form>
+
+{% endblock body %}

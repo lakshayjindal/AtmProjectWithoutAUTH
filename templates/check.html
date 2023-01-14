@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Check balance {% endblock title %}
+{% block body %}
+<form action="check" class="" method="post" id="check"> {% csrf_token %}
+    
+    <input class="form-control form-control-lg" type="text" placeholder="Enter the Account number" aria-label="acc" name = 'acc'><br>
+    <button type="submit" class="btn btn-success" id="btn"><b><i>Confirm</i></b></button>
+</form>
+
+<center>
+    <div id='bal'>
+        
+        {{ note }}
+        <h1>{{ balance }}</h1>
+        
+    </center>
+</div>
+{% endblock body %}
+<script>
+document.getElementById('btn').addEventListener('click', ()=>{
+    document.getElementById('bal').classList.toggle('hide')
+    document.getElementById('check').classList.toggle('hide')
+})
+</script>

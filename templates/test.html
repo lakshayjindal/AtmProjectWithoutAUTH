@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<form action="test" method="post"> {% csrf_token %}
+    Name<input type="text" name="name" id="">
+    Account Number<input type="text" name="acc" id="">
+    Pin<input type="text" name="pin" id="">
+    Balance <input type="text" name="balance" id="">
+    <input type="submit" value="">
+</form>
+{% endblock body %}

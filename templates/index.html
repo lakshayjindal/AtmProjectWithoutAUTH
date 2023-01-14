@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+{% load static %}
+{% block body %}
+<div class="alert alert-primary" role="alert">
+   <b>Welcome to Our ATM -<i> we are happy to help</i></b>  
+</div>
+<br>
+<hr>
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../static/atm1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../static/atm2.jpg" class="d-block w-100" alt="...">
+    </div>
+      <div class="carousel-item">
+        <img src="../static/atm3.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <center>
+  <h1>
+    What do you want to do
+  </h1>
+  <div class="d-grid gap-2">
+  
+    <a type="button" class="btn btn-info" href = "withdraw">Withdraw Money</a>
+    <a type="button" class="btn btn-info" href = "deposit">Deposit</a>
+    <a type="button" class="btn btn-info" href = "check">Check your balance</a>
+  </center>
+  </div>
+  <hr>
+  {% endblock body %}
